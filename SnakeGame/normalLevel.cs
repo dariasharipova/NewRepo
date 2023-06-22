@@ -46,9 +46,7 @@ namespace SnakeGame
             timer1.Tick += new EventHandler(update);
             timer1.Interval = 300;
             timer1.Start();
-            timer2.Tick += new EventHandler(timerGenerateFruit);
-            timer2.Interval = 300;
-            timer2.Start();
+            
             
         }
         private void eatingVoid()
@@ -120,10 +118,7 @@ namespace SnakeGame
                 }
             }
         }
-        private void timerGenerateFruit(object sender, EventArgs e)
-        {
-            generateFruit();
-        }
+        
         private void generateFruit()
         {
             Random r = new Random();

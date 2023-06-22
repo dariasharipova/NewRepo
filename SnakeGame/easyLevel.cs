@@ -169,7 +169,7 @@ namespace SnakeGame
             checkBorder();
             eatingVoid();
             moveSnake();
-            //generateFruit();
+            
         }
 
         private void Joistick(object sender, KeyEventArgs e)
