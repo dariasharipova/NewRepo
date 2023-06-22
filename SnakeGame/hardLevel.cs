@@ -69,6 +69,7 @@ namespace SnakeGame
                 score = 0;
                 labelScore.Text = "Score: " + score;
                 dirX = 1;
+                timer1.Interval = 150;
                 Close();
             }
             if (snake[0].Location.X > height - sizeOfCube)
@@ -78,6 +79,7 @@ namespace SnakeGame
                 score = 0;
                 labelScore.Text = "Score: " + score;
                 dirX = -1;
+                timer1.Interval = 150;
                 Close();
             }
             if (snake[0].Location.Y < 63)
@@ -87,6 +89,7 @@ namespace SnakeGame
                 score = 0;
                 labelScore.Text = "Score: " + score;
                 dirY = 1;
+                timer1.Interval = 150;
                 Close();
             }
             if (snake[0].Location.Y > height - sizeOfCube)
@@ -96,6 +99,7 @@ namespace SnakeGame
                 score = 0;
                 labelScore.Text = "Score: " + score;
                 dirY = -1;
+                timer1.Interval = 150;
                 Close();
             }
         }
@@ -111,6 +115,11 @@ namespace SnakeGame
                     }
                     score = score - (score - i + 1);
                 }
+                if (score <= 20)
+                    timer1.Interval = 100;
+                else if (score <= 10)
+                    timer1.Interval = 150;
+
             }
         }
         private void generateFruit()
